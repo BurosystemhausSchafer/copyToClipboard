@@ -1,2 +1,8 @@
 # copyToClipboard
-Copy to Clipboard Plugin
+Simple Plugin to copy with jQuery
+
+
+### Usage
+```javascript
+$('#mydiv').copyToClipboard();
+```
