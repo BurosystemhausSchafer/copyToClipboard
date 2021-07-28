@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../src/copyToClipboard.css">
+
+    <title>Hello, world!</title>
+
+    <style>
+        pre {
+            background: #333;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+<pre><code class="test">Hallo Welt
+Das ist der Code der kopiert werden soll</code></pre>
+<br>
+
+<pre class="test"><code class="language-js">// Question
+app.notify.question.fire({
+    title: 'Fragetitel',
+    text: 'Der Inhalt der Frage',
+    confirmButtonText: '<i class="fas fa-thumbs-up"></i> Große Zustimmung',
+    cancelButtonText: '<i class="fas fa-thumbs-down"></i> Große Abneigung',
+    showCancelButton: true
+});
+    </code></pre>
+
+
+    <pre id="hallo"><code class="language-js">// Question
+        app.notify.question.fire({
+            title: 'Fragetitel',
+            text: 'Der Inhalt der Frage',
+            confirmButtonText: '<i class="fas fa-thumbs-up"></i> Große Zustimmung',
+            cancelButtonText: '<i class="fas fa-thumbs-down"></i> Große Abneigung',
+            showCancelButton: true
+        });
+            </code></pre>
+        
+
+    </div>
+
+
+
+
+    
+
+
+    <!-- jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Copy to Clipboard -->
+    <script src="../src/copyToClipboard.js"></script>
+
+    <script>
+
+        $('.test').copyToClipboard();
+
+        $('#hallo').copyToClipboard({
+            buttonText: 'Copy',
+            callback: function(data) {
+                alert(data);
+            }
+        });
+
+
+        // 
+        // alert('TEST');
+
+    </script>
+
+</body>
+
+</html>
