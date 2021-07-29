@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/BurosystemhausSchafer/copyToClipboard/issues"
   },
-  "homepage": "https://github.com/BurosystemhausSchafer/copyToClipboard#readme"
+  "homepage": "https://github.com/BurosystemhausSchafer/copyToClipboard#readme",
+  "dependencies": {
+    "jquerycopytoclipboard": "^1.0.0"
+  }
 }
