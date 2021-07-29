@@ -1,6 +1,6 @@
 {
   "name": "copytoclipboard",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Simple Plugin to copy with jQuery",
   "main": "./src/copyToClipboard.js",
   "directories": {
