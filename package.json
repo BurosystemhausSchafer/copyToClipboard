@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/BurosystemhausSchafer/copyToClipboard#readme",
   "dependencies": {
-    "jquerycopytoclipboard": "^1.0.1"
+    "jquerycopytoclipboard": "^1.0.2"
   }
 }
