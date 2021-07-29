@@ -22,9 +22,6 @@
             // Parent auf Relative
             el.css({ position: 'relative' });
 
-
-            console.log(options);
-
             // 1. Eine Box erstellen die an der richtigen Position im Div ist
             var html = '<div class="' + options.buttonClass + ' ' + ((options.themeClass) ? options.themeClass : "") + '">' + options.buttonText + '</div>'
 
