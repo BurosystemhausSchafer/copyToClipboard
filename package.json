@@ -1,0 +1,22 @@
+{
+  "name": "copytoclipboard",
+  "version": "1.0.1",
+  "description": "Simple Plugin to copy with jQuery",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BurosystemhausSchafer/copyToClipboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BurosystemhausSchafer/copyToClipboard/issues"
+  },
+  "homepage": "https://github.com/BurosystemhausSchafer/copyToClipboard#readme"
+}
