@@ -22,6 +22,9 @@ $('#mydiv').copyToClipboard({
 
 ### Releasenotes
 
+##### Version 1.0.2 - 29.07.2021
+- removed console.log() 
+
 ##### Version 1.0.1 - 29.07.2021
 - Custom Themes and dark Theme
 - Rework on Sample Page
