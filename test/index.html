@@ -15,11 +15,33 @@
     <title>Hello, world!</title>
 
     <style>
+        .example {
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+
+        .example-dark {
+            background: black;
+            color: white;
+        }
+
         pre {
             background: #333;
             color: white;
             padding: 20px;
         }
+
+        .row>div {
+            margin-bottom: 10px;
+        }
+
+        .theme-custom {
+            background: green;
+            color: purple;
+        }
+
+
     </style>
 
 </head>
@@ -31,38 +53,53 @@
     <br>
 
     <div class="container">
-<pre><code class="test">Hallo Welt
-Das ist der Code der kopiert werden soll</code></pre>
-<br>
 
-<pre class="test"><code class="language-js">// Question
-app.notify.question.fire({
-    title: 'Fragetitel',
-    text: 'Der Inhalt der Frage',
-    confirmButtonText: '<i class="fas fa-thumbs-up"></i> Große Zustimmung',
-    cancelButtonText: '<i class="fas fa-thumbs-down"></i> Große Abneigung',
-    showCancelButton: true
-});
-    </code></pre>
+        <div class="row">
+            <div class="col-md-4">
+                <div id="ex1" class="example">
+                    Standard Feld ohne Konfiguration
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="ex2" class="example">
+                    Das ist ein Feld mit einem Callback
+                </div>
+            </div>
+            <div  class="col-md-4">
+                <div id="ex3" class="example">
+                    Benutzerdefinierter Text
+                </div>
+            </div>
+            <div  class="col-md-4">
+                <div id="ex4" class="example example-dark">
+                    Das ist ein dunkles Feld
+                </div>
+            </div>
+            <div  class="col-md-4">
+                <div id="ex5" class="example example-dark">
+                    Custom Theme
+                </div>
+            </div>
+        </div>
 
 
-    <pre id="hallo"><code class="language-js">// Question
-        app.notify.question.fire({
-            title: 'Fragetitel',
-            text: 'Der Inhalt der Frage',
-            confirmButtonText: '<i class="fas fa-thumbs-up"></i> Große Zustimmung',
-            cancelButtonText: '<i class="fas fa-thumbs-down"></i> Große Abneigung',
-            showCancelButton: true
-        });
-            </code></pre>
-        
+        <br><br><br>
+        <hr>
+
+        <br><br>
+        <h3>Test Kopier Feld</h3>
+        <textarea cols="30" rows="5" class="form-control">
+
+
+        </textarea>
+
 
     </div>
 
 
 
 
-    
+
 
 
     <!-- jQuery-->
@@ -80,18 +117,26 @@ app.notify.question.fire({
 
     <script>
 
-        $('.test').copyToClipboard();
+        $('#ex1').copyToClipboard();
 
-        $('#hallo').copyToClipboard({
-            buttonText: 'Copy',
-            callback: function(data) {
+        $('#ex2').copyToClipboard({
+            callback: function (data) {
                 alert(data);
             }
         });
 
+        $('#ex3').copyToClipboard({
+            buttonText: 'I bims 1 Copy',
+        });
 
-        // 
-        // alert('TEST');
+
+        $('#ex4').copyToClipboard({
+            themeClass: 'theme-dark'
+        });
+
+        $('#ex5').copyToClipboard({
+            themeClass: 'theme-custom'
+        });
 
     </script>
 

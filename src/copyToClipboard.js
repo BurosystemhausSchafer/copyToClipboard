@@ -2,13 +2,13 @@
 
     $.fn.copyToClipboard = function (options) {
 
-
         // Meine Default Werte
         var defaults = {
-            buttonClassName: "copyToClipboard-button",
+            buttonClass: "copyToClipboard-button",
             buttonText: "Kopieren",
+            themeClass: false,
             callback: false
-        }
+        }        
 
         // Optionen
         options = $.extend(defaults, options);
@@ -22,21 +22,24 @@
             // Parent auf Relative
             el.css({ position: 'relative' });
 
+
+            console.log(options);
+
             // 1. Eine Box erstellen die an der richtigen Position im Div ist
-            var html = '<div class="' + options.buttonClassName +'">' + options.buttonText + '</div>'
+            var html = '<div class="' + options.buttonClass + ' ' + ((options.themeClass) ? options.themeClass : "") + '">' + options.buttonText + '</div>'
 
             // 
             el.append(html);
 
             // Hover Funktion zum Ein- und Ausblenden der Copy Button
             el.hover(function() {
-                el.find('.' + options.buttonClassName).show();
+                el.find('.' + options.buttonClass).show();
             }, function() {
-                el.find('.' + options.buttonClassName).hide();
+                el.find('.' + options.buttonClass).hide();
             });
 
             // Click Event
-            el.on('click', '.' + options.buttonClassName,function() {
+            el.on('click', '.' + options.buttonClass,function() {
                 
                 var temp = $('<textarea>');
                 $("body").append(temp);
@@ -44,7 +47,8 @@
                 var text = $(el).text().trim();
 
                 // Copy abschneiden
-                text = text.substr(0, text.length - options.buttonText.length)
+                text = text.substr(0, text.length - options.buttonText.length).trim();
+
 
                 temp.val(text).select();
 
